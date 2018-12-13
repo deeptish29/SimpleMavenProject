@@ -29,13 +29,4 @@ pipeline {
         }
     }   
 }
-#!/bin/sh
-if [ -f /usr/share/java-utils/java-functions ] ; then
-  . /usr/share/java-utils/java-functions
-  set_jvm
-  set_javacmd
-fi
 
-export M2_HOME="${M2_HOME:-/usr/share/maven}"
-export JAVA_HOME; $M2_HOME/bin/mvn "$@"
-mvn (END)
